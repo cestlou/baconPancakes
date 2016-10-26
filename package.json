@@ -1,0 +1,17 @@
+{
+  "name": "bacon_pancakes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "luna alison alvarez",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "body-parser": "^1.4.3",
+    "ejs": "^2.5.2",
+    "express": "^4.13.4"
+  }
+}

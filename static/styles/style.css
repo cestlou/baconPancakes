@@ -1,0 +1,25 @@
+body {
+    padding: 10px;
+    background-color: #fcfcfc;
+}
+
+h1 {
+    font-family: 'Petit Formal Script', cursive;
+}
+
+h2, h3, p, div {
+    font-family: 'Raleway', sans-serif;
+}
+
+.name {
+    margin-bottom: 0;
+}
+
+.main {
+    margin-top: 0;
+}
+
+.self {
+    height: 50%;
+    
+}
