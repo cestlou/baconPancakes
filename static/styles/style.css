@@ -1,3 +1,18 @@
+/*mobile first*/
+
+@media only screen and (max-width: 400px) {
+body { font-size:2em;}
+} 
+
+@media only screen and (max-width: 800px) {
+body { font-size:100%;}
+} 
+
+@media only screen and (max-width: 1100px) {
+body { font-size:120%;}
+}
+
+
 body {
     padding: 5px 15px 15px 15px;
     background-color: #fcfcfc;
@@ -18,8 +33,8 @@ h2, h3, p, div {
 }
 
 .block {
-    margin: 0 0 10px 0;
-    border-bottom: 1px solid purple;
+    margin: 0 0 35px 0;
+    /*border-bottom: 1px solid purple;*/
 }
 
 .tagline {
@@ -61,12 +76,32 @@ h2, h3, p, div {
 .bio-container {
     margin: 20px 20px 0 0;
 }
+
 .self {
-    float: left;
+    /*float: left;*/
     max-width: 35%;
     border-radius: 100%;
-    margin: 35px 0 0 50px;
+    margin: 35px 65px 0 70px;
 }
+
 .bio {
- overflow:hidden;
+    overflow: hidden;
+    padding: 70px 100px 0 0;
+}
+
+.slideshow {
+    text-align: center;
+}
+
+.slideshow img {
+    margin-left: -25px;
+    min-height: 100%;
+    max-height: 100%;
+    vertical-align: top;
+    box-shadow: 5px 2px 15px #001122;
+}
+
+.slideshow img:hover {
+    margin: 0px 45px 0px 20px;
+    transition: .2s ease-in-out;
 }

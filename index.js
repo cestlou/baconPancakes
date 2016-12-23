@@ -9,14 +9,21 @@ const port = 5432;
 
 // configure support for ejs templates;
 app.set('view engine', 'ejs');
-app.set('views', express.static(__dirname + '/views'));
 
 // define the folder that will be used for static assets
 app.use(express.static(path.join(__dirname, 'static')));
 
 // universal rendering/routing
-app.get('/', (req, res) => {  
-  res.render('index')
+app.get('/', (req, res) => {
+  var puppies = ["Luna", "James", "Olive"]
+  var stuff = {
+    shit: 'poop',
+    weener: 'haha'
+  }
+  res.render('index', {
+    puppies,
+    stuff
+  })
 })
 
 app.listen(port, (err) => {

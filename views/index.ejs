@@ -1,11 +1,66 @@
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/index.css">
-</head>
-<body>
-    <h1>YOU MADE IT TO THE HOMEPAGE!</h1>
-    <h3>~woop~woooooooooop~</h3>
-</body>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Luna Alison Alvarez</title>
+		<!--stylesheets-->
+		<link rel="stylesheet" type="text/css" href="./styles/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script|Raleway" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+		<script>
+			$(document).ready(function(){
+				var slideshow = $('.slideshow');
+				var children = slideshow.children();
+				var containerWidth = slideshow.width();
+				children.each(function(i, img){
+					$(img).css("width", containerWidth / children.length - 20);
+				});
+				var arr = <%- JSON.stringify(puppies) %>
+				console.log(arr)
+
+				var obj = <%- JSON.stringify(stuff) %>
+				console.log(obj)
+			});
+		</script>
+	</head>
+	<body>
+		<div class="block">
+			<a href="#">
+				<img src="./img/icons/menu.svg" alt="" class="icon menu">
+			</a>
+			<div class="hide">
+
+			</div>
+			<h1 class="name">Luna Alison Alvarez</h1>
+			<!--<h3 class="tagline">coding. puppies. pizza.</h3>-->
+		</div>
+
+		<div class="bio-container">
+			<p>
+				<img src="./img/pug.jpg" alt="luna alison alvarez" class="self">
+			</p>
+			<p class="bio">
+				Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.
+				<br>
+				<br>
+				Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.
+				<br>
+				<br>
+				<br>
+				Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.
+			</p>
+		</div>
+
+		<div class="slideshow">
+			<img src="http://placekitten.com/399/500" alt="" style="width: 0px;">
+			<img src="http://placekitten.com/401/500" alt="" style="width: 0px;">
+			<img src="http://placekitten.com/400/501" alt="" style="width: 0px;">
+			<img src="http://placekitten.com/402/500" alt="" style="width: 0px;">
+			<img src="http://placekitten.com/400/501" alt="" style="width: 0px;">
+			<img src="http://placekitten.com/402/500" alt="" style="width: 0px;">
+			<img src="http://placekitten.com/402/500" alt="" style="width: 0px;">
+			<img src="http://placekitten.com/400/501" alt="" style="width: 0px;">
+			<img src="http://placekitten.com/402/500" alt="" style="width: 0px;">
+		</div>
+	</body>
 </html>
