@@ -1,5 +1,5 @@
 body {
-    padding: 10px;
+    padding: 5px 15px 15px 15px;
     background-color: #fcfcfc;
 }
 
@@ -13,13 +13,60 @@ h2, h3, p, div {
 
 .name {
     margin-bottom: 0;
+    font-size: 50px;
+    color: #D097FF;
 }
 
-.main {
-    margin-top: 0;
+.block {
+    margin: 0 0 10px 0;
+    border-bottom: 1px solid purple;
 }
 
+.tagline {
+    margin: 0 0 8px 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.menu:hover + .hide {
+    display: block;
+}
+
+
+/*image class styling*/
+
+/*.self {
+
+}*/
+
+.icon {
+    height: 15%;
+}
+
+.menu {
+    /*display: inline-block;
+    position: relative;
+    margin: -70px 0 0px 1339px;*/
+    /*width: 194%;
+    height: 12%;*/
+
+    max-width: 4.5%;
+    float: right;
+    height: inherit;
+}
+
+
+.bio-container {
+    margin: 20px 20px 0 0;
+}
 .self {
-    height: 50%;
-    
+    float: left;
+    max-width: 35%;
+    border-radius: 100%;
+    margin: 35px 0 0 50px;
+}
+.bio {
+ overflow:hidden;
 }
