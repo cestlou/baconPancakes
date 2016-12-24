@@ -4,8 +4,11 @@ var app = express();
 var http = require('http');
 var path = require('path');
 const hostname = '127.0.0.1';
-const port = 5432;
+const port = 3000;
 
+var config = require('./knexfile');
+var env = 'development';
+var pgDatabaseConnection = require('knex')(config[env]);
 
 // configure support for ejs templates;
 app.set('view engine', 'ejs');
@@ -15,15 +18,35 @@ app.use(express.static(path.join(__dirname, 'static')));
 
 // universal rendering/routing
 app.get('/', (req, res) => {
-  var puppies = ["Luna", "James", "Olive"]
-  var stuff = {
-    shit: 'poop',
-    weener: 'haha'
-  }
-  res.render('index', {
-    puppies,
-    stuff
+  
+
+  pgDatabaseConnection('projects').where('id', 1)
+  .then(function(result) {
+
+    res.render('index', {
+      result
+    })
+
   })
+  
+})
+
+app.get('/projects/:id', (req, res) => {
+  
+  pgDatabaseConnection('projects').where('id', req.params.id)
+  .then(function(result) {
+    if(!!result[0]) {
+      res.render('projects/index', {
+        result
+      })
+    } else {
+      res.render('404', {
+        result : "aint shit here"
+      })
+    }
+    
+  })
+  
 })
 
 app.listen(port, (err) => {

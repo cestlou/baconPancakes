@@ -74,11 +74,12 @@ h2, h3, p, div {
 
 
 .bio-container {
+    display: table-cell;
     margin: 20px 20px 0 0;
 }
 
 .self {
-    /*float: left;*/
+    float: left;
     max-width: 35%;
     border-radius: 100%;
     margin: 35px 65px 0 70px;

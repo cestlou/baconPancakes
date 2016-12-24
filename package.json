@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "luna alison alvarez",
   "license": "ISC",
   "dependencies": {
@@ -15,5 +12,14 @@
     "express": "^4.13.4",
     "knex": "^0.12.6",
     "pg": "^6.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+
+    "postgresClient": "postgres -D /usr/local/var/postgres",
+    "postgres:createDev": "createdb -h localhost -p 5432 -U lunaalisonalvarez baconPancakesDevelopment",
+    "postgres:devConsole": "psql -h localhost -p 5432 -U lunaalisonalvarez baconPancakesDevelopment",
+    "knex": "node_modules/knex/bin/cli.js"
+
   }
 }
