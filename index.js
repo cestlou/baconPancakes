@@ -10,7 +10,7 @@ var config = require('./knexfile');
 var env = 'development';
 var pgDatabaseConnection = require('knex')(config[env]);
 
-// configure support for ejs templates;
+// configure support for ejs templates
 app.set('view engine', 'ejs');
 
 // define the folder that will be used for static assets
@@ -48,6 +48,18 @@ app.get('/projects/:id', (req, res) => {
   })
   
 })
+
+app.get('/dogScore', function (req, res,html) {
+ res.render('projects/dogScore');
+});
+
+app.get('/seattlemakers', function (req, res,html) {
+ res.render('projects/seattlemakers');
+});
+
+app.get('/apptentive', function (req, res,html) {
+ res.render('projects/apptentive');
+});
 
 app.listen(port, (err) => {
   if (err) {
