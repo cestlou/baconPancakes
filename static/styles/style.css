@@ -32,6 +32,12 @@ h2, h3, p, div {
     color: #D097FF;
 }
 
+.divider-headline {
+    color: #D097FF;
+    text-align: center;
+    font-size: 40px;
+}
+
 .block {
     margin: 0 0 35px 0;
     /*border-bottom: 1px solid purple;*/
@@ -76,6 +82,7 @@ h2, h3, p, div {
 .bio-container {
     display: table-cell;
     margin: 20px 20px 0 0;
+    padding-bottom: 145px;
 }
 
 .self {
@@ -91,7 +98,6 @@ h2, h3, p, div {
 }
 
 .slideshow {
-    padding: 70px 0 0 0;
     text-align: center;
 }
 
